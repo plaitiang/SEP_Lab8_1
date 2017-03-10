@@ -1,3 +1,4 @@
+
 import sys
 from PySide.QtCore import *
 from PySide.QtGui import *
@@ -23,6 +24,9 @@ class Simple_drawing_window(QWidget):
         p.drawPolygon([QPoint(50,200),QPoint(150,200),QPoint(100,400)])
         
         p.drawPie(600,200,100,100,0,180 *32)
+        
+        p.setBrush(QColor(127, 0, 0))
+        p.drawEllipse(QPoint(700,200),50,100)
 
         p.drawImage(QRect(200,100,320,320),self.rabbit)
         p.end()
