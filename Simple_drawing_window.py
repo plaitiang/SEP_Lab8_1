@@ -1,4 +1,6 @@
 
+
+
 import sys
 from PySide.QtCore import *
 from PySide.QtGui import *
@@ -27,6 +29,8 @@ class Simple_drawing_window(QWidget):
         
         p.setBrush(QColor(127, 0, 0))
         p.drawEllipse(QPoint(700,200),50,100)
+        
+        p.drawPie(900,400,150,150,0,180*32)
 
         p.drawImage(QRect(200,100,320,320),self.rabbit)
         p.end()
